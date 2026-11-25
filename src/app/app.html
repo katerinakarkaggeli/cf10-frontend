@@ -1,3 +1,4 @@
+@if(!doNotShowRest) {
 <div class="container mt-4">
   <div class="d-flex gap-5 align-items-center">
     <div class="bg-info p-2">
@@ -59,7 +60,14 @@
     <h3>From Step5 Component</h3>
     <app-step5-event-bind></app-step5-event-bind>
    </div>
-
-   <div>
-    <router-outlet></router-outlet>
+  } @else {
+   <div class="container mt-2">
+    <app-navbar></app-navbar>
+    <div class="d-flex flex-row gap-2 mt-2">
+      <app-step7-list-group-menu class="w-25"></app-step7-list-group-menu>
+      <div class="flex-grow-1 p-2 w-75">
+      <router-outlet></router-outlet>
+     </div>
+    </div>
    </div>
+  }
